@@ -25,7 +25,7 @@ import { FormsModule } from '@angular/forms';
     AlbumComponent,
     MenuuserComponent,
     CrearLibroComponent,
-    EditarLibroComponent
+    EditarLibroComponent,
   ],
   imports: [
     FormsModule,

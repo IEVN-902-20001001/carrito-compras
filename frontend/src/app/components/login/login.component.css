@@ -1,0 +1,103 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    font-family: 'Jost', sans-serif;
+  }
+  
+  .login-form {
+    flex: 1;
+  }
+  
+  .container {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 30px;
+    min-width: 500px;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+  }
+  
+  .welcome-column {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/assets/imagen.png');
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
+    background-position: center; /* Centra la imagen en el div */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    width: 612px;
+    height: 420px;
+  }
+  
+  .welcome-text {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Jost', sans-serif;
+  }
+  
+  h2 {
+    color: #6B240C;
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+
+  }
+  
+  .form-group {
+    text-align: left;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #e1e5ea;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+  }
+  
+  .btn-primary {
+    background-color: #6B240C;
+    color: #ffffff;
+    border: 1px solid #6B240C;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    font-family: 'Jost', sans-serif;
+  }
+  
+  .btn-primary:hover {
+    background-color: #C69774;
+    border: solid;
+  }
+  
+  .pt-3 a {
+    color: #6B240C;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .pt-3 a:hover {
+    color: #c98d78;
+    text-decoration: underline;
+  }
+  
+  .text-info{
+    color:#6B240C !important;
+  }

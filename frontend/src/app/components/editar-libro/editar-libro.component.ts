@@ -13,10 +13,15 @@ export class EditarLibroComponent implements OnInit {
   imagen: any = null;
 
   libro = {
-    nombre: "",
-    descripcion: "",
-    precio: "",
-    imagen: null
+    id_producto: 0,
+    imagen_producto: "",
+    nombre_producto: "",
+    descripcion_producto: "",
+    autor_producto: "",
+    ano_producto: 0,
+    precio_producto: 0,
+    stock_producto: 0,
+    estatus_producto:0
   };
 
   messageOk = null;
@@ -25,43 +30,63 @@ export class EditarLibroComponent implements OnInit {
   constructor(private rest: RestService, private route: Router) { }
 
   ngOnInit(): void {
+    var datos = sessionStorage.getItem('datos_usuario')
+    if (datos){
+      var usuario = JSON.parse(datos)
+      
+      if (usuario.tipo_usuario!=1){
+        this.route.navigate([""])
+      }
+    }else{
+      this.route.navigate(["login"])
+      return
+    }
     this.cargarLibro();
   }
 
   async cargarLibro() {
-    var id = sessionStorage.getItem('id');
-    var res = await this.rest.GetRequest('listOfBooks/' + id).toPromise();
-    res = res.data;
-    this.libro.nombre = res.nombre;
-    this.libro.descripcion = res.descripcion;
-    this.libro.precio = res.precio;
-    this.libro.imagen = res.imagen;
-    this.imagen = res.imagen;
-  }
-
-  uploadImagen(event: any) {
-    if (event.target.files && event.target.files[0]) {
-      var file = event.target.files[0];
-      const reader = new FileReader();
-      reader.onload = e => this.imagen = reader.result;
-      reader.readAsDataURL(file);
+    try {
+      var id = sessionStorage.getItem('id');
+      console.log(id)
+      var res = await this.rest.GetRequest('listarProductos/' + id).toPromise();
+      console.log(res)
+  
+      if (res && res.producto) {
+        this.libro.id_producto = res.producto.id_producto;
+        this.libro.imagen_producto = res.producto.imagen_producto;
+        this.libro.nombre_producto = res.producto.nombre_producto;
+        this.libro.descripcion_producto = res.producto.descripcion_producto;
+        this.libro.autor_producto = res.producto.artista_producto;
+        this.libro.ano_producto = res.producto.ano_producto;
+        this.libro.precio_producto = res.producto.precio_producto;
+        this.libro.stock_producto = res.producto.stock_producto;
+        this.libro.estatus_producto = res.producto.estatus_producto;
+        this.imagen = this.libro.imagen_producto;
+      } else {
+        console.error('No se recibieron datos del producto.');
+        // Puedes agregar lógica adicional aquí según tus necesidades.
+      }
+    } catch (error) {
+      console.error('Error al cargar el producto:', error);
+      // Puedes agregar lógica adicional aquí según tus necesidades.
     }
   }
 
   async actualizar() {
-    // obtener imagen
-    this.libro.imagen = this.imagen;
-
-    var id = sessionStorage.getItem('id');
-
     try {
-      var res = await this.rest.PutRequest('updateBook/' + id, this.libro).toPromise();
+      // Asigna la URL de la imagen al campo correspondiente en el objeto this.libro
+      this.libro.imagen_producto = this.imagen;
+      
+      var res = await this.rest.PostRequest('/editarProducto', this.libro).toPromise();
       this.messageOk = res.message;
+
+      // Luego de actualizar, redirige al usuario a la vista de "libros"
+      this.route.navigate(["libros"]);
     } catch (error: any) {
-      this.messageErr = error.error.message
+      this.messageErr = error.error.message;
     }
   }
-
+  
   cancelar() {
     this.route.navigate(["libros"])
   }

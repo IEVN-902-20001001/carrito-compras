@@ -1,0 +1,64 @@
+/* styles.css */
+
+/* Estilo para evitar la distorsión de las imágenes */
+.card-img-top {
+    object-fit: contain;
+  }
+  
+  /* Estilos de fuente y peso del texto */
+  .card-title,
+  .card-text {
+    font-family: 'Jost', sans-serif;
+  }
+  
+  .card-title {
+    font-weight: bold;
+  }
+  
+  /* Estilos para los botones de editar y eliminar */
+  .btn-outline-primary,
+  .btn-outline-danger {
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+  }
+
+
+.card-body .btn-group .btn-outline-primary,
+.card-body .btn-group .btn-outline-danger {
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-body .btn-group .btn-outline-primary {
+  color: #B99470;
+  border-color: #B99470;
+}
+
+.card-body .btn-group .btn-outline-danger {
+  color: #552603;
+  border-color: #552603;
+}
+
+.card-body .btn-group .btn-outline-primary:hover {
+  background-color: #B99470;
+  color: #fff;
+}
+
+.card-body .btn-group .btn-outline-danger:hover {
+  background-color: #552603;
+  color: #fff;
+}
+.align-items-center {
+    align-items: center!important;
+    justify-content: center !important;
+}
+.bg-light{  
+    background-color: #faf0eb !important;
+}
+.jumbotron-heading{
+    color: #552603;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+}
+
+  

@@ -1,0 +1,121 @@
+body {
+    font-family: 'Jost', sans-serif;
+    margin: 0;
+  }
+  .content-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Ajusta según tu preferencia */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agregamos una transición */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Ajusta según tu preferencia */
+    margin-bottom: 20px;
+
+  }
+  
+  .content-section img:hover {
+    transform: scale(1.05); /* Ajusta según tu preferencia */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Ajusta según tu preferencia */
+  }
+  
+  
+  .hero-section {
+    background-color: #6B240C;
+    color: #C69774;
+    padding: 100px 0;
+  }
+  
+  .btn-primary {
+    background-color: #C69774;
+    color: #6B240C;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #6B240C;
+    color: #C69774;
+  }
+  
+  .content-section {
+    background-color: #C69774;
+    color: #6B240C;
+    padding: 50px 0;
+  }
+  
+  .text-dark {
+    color: #6B240C;
+  }
+  
+  .text-light {
+    color: #C69774;
+    text-align: center;
+    width: 100%;
+
+  }
+
+  /* home.component.css */
+
+/* Estilo para evitar la distorsión de las imágenes */
+.card-img-top {
+  object-fit: contain;
+}
+
+/* Estilos de fuente y peso del texto */
+.card-title,
+.card-text {
+  font-family: 'Jost', sans-serif;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+/* Estilos para los botones de agregar al carrito */
+.btn-agregar {
+  font-family: 'Jost', sans-serif;
+  font-weight: bold;
+  color: #B99470;
+  border-color: #B99470;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-agregar:hover {
+  background-color: #B99470;
+  color: #fff;
+}
+
+/* Estilos para las alertas de mensaje */
+.alert {
+  font-family: 'Jost', sans-serif;
+}
+
+.alert-success {
+  background-color: #B99470;
+  color: #fff;
+  border-color: #B99470;
+}
+
+
+.alert-danger {
+  background-color: #552603;
+  color: #fff;
+  border-color: #552603;
+}
+
+/* Ajustes generales */
+.bg-light {
+  background-color: #faf0eb !important;
+}
+
+.row-libros{
+  background-color: #6B240C;
+  padding: 30px;
+}
+
+
+  

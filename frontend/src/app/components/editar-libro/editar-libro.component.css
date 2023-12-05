@@ -1,0 +1,55 @@
+.jumbotron-heading{
+    color: #552603;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+}
+.card-title,
+.card-text {
+  font-family: 'Jost', sans-serif;
+  font-weight: bold;
+
+}
+
+.card-img-top {
+    object-fit: contain;
+}
+
+/* Estilos para los botones Actualizar y Cancelar */
+.btn-outline-primary,
+.btn-outline-danger {
+  font-family: 'Jost', sans-serif;
+  font-weight: bold;
+}
+
+.btn-outline-primary,
+.btn-outline-danger {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary {
+  color: #B99470;
+  border-color: #B99470;
+}
+
+.btn-outline-danger {
+  color: #552603;
+  border-color: #552603;
+}
+
+.btn-outline-primary:hover {
+  background-color: #B99470;
+  color: #fff;
+}
+
+.btn-outline-danger:hover {
+  background-color: #552603;
+  color: #fff;
+}
+  
+  /* Estilos para el formulario horizontal */
+  .form-group {
+    margin-bottom: 1.5rem;
+  
+
+  }
+  

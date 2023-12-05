@@ -25,7 +25,7 @@ export class RestService {
 
   GetRequest(serverAddress: string): Observable<any> {
     console.log(serverAddress);
-    return this.httpClient.get<any>(address + serverAddress, httpOptions);
+    return this.httpClient.get<any>(address + serverAddress);
   }
 
   PutRequest(serverAddress: string, info: object): Observable<any> {
@@ -33,8 +33,8 @@ export class RestService {
     return this.httpClient.put<any>(address + serverAddress, info, httpOptions);
   }
 
-  DeleteRequest(serverAddress: string): Observable<any> {
+  DeleteRequest(serverAddress: string, info: object): Observable<any> {
     console.log(serverAddress);
-    return this.httpClient.delete<any>(address + serverAddress, httpOptions);
+    return this.httpClient.post<any>(address + serverAddress, info, httpOptions);
   }
 }
